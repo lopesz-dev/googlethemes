@@ -1,4 +1,3 @@
-
 const canvas = document.createElement('canvas');
 const ctx = canvas.getContext('2d');
 document.body.appendChild(canvas);
@@ -11,7 +10,6 @@ canvas.style.height = '100vh';
 canvas.style.zIndex = '-1';
 canvas.style.background = 'black';
 
-
 const LARGURA_FIXA = 3840; 
 const ALTURA_FIXA = 2160;
 canvas.width = LARGURA_FIXA;
@@ -21,7 +19,6 @@ const alphabet = "0101010101010101";
 const fontSize = 16;
 const columns = LARGURA_FIXA / fontSize;
 const rainDrops = Array.from({ length: columns }).fill(1);
-
 
 let lastTime = 0;
 const fps = 15; 
@@ -53,10 +50,8 @@ function drawMatrix(timestamp) {
         timer += deltaTime;
     }
 
-    
     requestAnimationFrame(drawMatrix);
 }
-
 
 const style = document.createElement('style');
 style.innerHTML = `
@@ -67,6 +62,5 @@ style.innerHTML = `
 `;
 document.head.appendChild(style);
 
-
 requestAnimationFrame(drawMatrix);
-console.log("by: lopesz.dev");
+console.log("Theme by Lopesz.dev");
